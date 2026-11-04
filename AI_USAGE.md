@@ -36,6 +36,8 @@ each project; the software is provided without warranty.
   READMEs of [mystic-crypt](https://github.com/astrapi69/mystic-crypt#verifying-the-release-signatures)
   and [Lethenon](https://github.com/astrapi69/lethenon#verifying-the-release-signatures)
 
-Commits and pull requests carry no AI attribution line; this page says it once, for all of them.
+Whether commits and pull requests name the AI agents is decided per repository, and each
+repository says how in its own AI_USAGE.md. The repositories that check the provenance of their
+commits ([rule #373](https://github.com/astrapi69/mystic-crypt-ui/issues/373)) carry no attribution line.
 
 Asterios Raptis
