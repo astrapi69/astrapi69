@@ -18,6 +18,7 @@ each project; the software is provided without warranty.
 
 ## Where to see it
 
+- The rules every agent session follows, with the source of each: [rules/](rules/index.md)
 - Security advisories, each with the version that fixes it:
   [mystic-crypt-ui](https://github.com/astrapi69/mystic-crypt-ui/security/advisories),
   [mystic-crypt](https://github.com/astrapi69/mystic-crypt/security/advisories),
