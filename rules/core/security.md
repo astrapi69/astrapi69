@@ -7,3 +7,4 @@
 - Never commit or write down a secret (key, real keystore, password, token, API key) in code, config, notes or docs; git-ignore .env, make test keys at runtime. (AG-034)
 - Never let a secret or plaintext reach a message, the chat, a log or build output. (AG-035)
 - Pass a secret by standard input, a hidden prompt or an environment variable of the one process, never as a command-line argument. (AG-036)
+- Before a repository is opened to cloud agents, and once a month for the private notes repository, scan its whole history for secrets (a tool such as gitleaks); report place and commit, never a value. (NW-014)
