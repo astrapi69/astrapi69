@@ -17,8 +17,11 @@
 - Make work survive a crash: commit WIP once green, write each finding to a file at once, start long runs detached, and say at a stop what is uncommitted where. (AG-019)
 - In German prose, the chat included, write real umlauts (ä, ö, ü), never ae, oe or ue. (AG-020)
 - Run GUI automation and UI tests only on an Xvfb started for them, with DISPLAY set on each call and its socket checked; take the pid from $!, never pgrep -f. (AG-022)
-- Never stop a Gradle daemon that is busy, and never stop daemons in the middle of another session's, worktree's or the IDE's build. (AG-024)
+- Never stop or kill a Gradle daemon, not even an idle one of another session; to keep builds apart, an agent or worktree may use its own GRADLE_USER_HOME. (AG-024)
 - Chain dependent shell steps with && and never with ;, and never pipe a check through | tail or anything else that hides its exit code. (DC-060)
+- Park a question in a document as TODO(clarify): <question> only within the session; before the merge answer each one or turn it into an issue (TODO(#NN)). (OC-003)
+- As a subagent, report a finding with its reproducing test to the session that dispatched you; that session files the issue without asking. (DZ-001)
+- Run shell commands as bash -c '...' with the commands written out; use a script file only when it is committed. A go before each round is adaptive-learner's own rule. (DZ-002)
 
 ## The Agenten-Board
 

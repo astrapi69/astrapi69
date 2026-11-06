@@ -6,7 +6,7 @@ Read on demand; the rules every session needs are in core/.
 
 - Record in each chat journal entry, per relevant step, the maintainer's prompt verbatim, the optimized prompt, goal, result and commit, plus decisions with reasons and problems with solutions; no small talk. (DC-006)
 - In Markdown use one # title, ## sections and ### subsections without skipping a level, - for bullets, backticks for paths, commands and identifiers, #NNN for issues, bold only for a key term. (DC-008)
-- Keep CLAUDE.md under 8000 characters and current: purpose, stack keywords, short architecture, build targets and rule pointers, updated when one changes; no file trees, version tables or history. (DC-009)
+- Keep CLAUDE.md under 8000 characters and current: purpose, stack keywords, short architecture, build targets and pointers; never test counts, version numbers, file trees or history. (DC-009)
 - Keep each volatile number (test, coverage, mutation, plugin or language counts) in one canonical place; other documents carry a pointer to it, or change in the same commit. (DC-010)
 - Word a claim in a public text so that it holds in every CI state: name the enforced floor, never a measured value such as 100%. (DC-011)
 - Take every value and name a document states (number, default, threshold, flag, path, target, class, option) from the code or config defining it and check it exists; flag what you cannot find. (DC-012)
@@ -23,3 +23,4 @@ Read on demand; the rules every session needs are in core/.
 - Give a document written before the English rule a Language: line saying so instead of translating it for its own sake. (DC-023)
 - Give each repository agents have worked on since 2026 a README section "How this project is made" that links to the one project-wide AI_USAGE.md in the profile repository. (DC-024)
 - Leave the GitHub About sections (description, website, topics) of the family's repositories as they are until the maintainer asks to unify them in one go. (DC-025)
+- Put German notes written for the maintainer, such as explorations, into his private notes repository, never into a public repository. (OC-007)
