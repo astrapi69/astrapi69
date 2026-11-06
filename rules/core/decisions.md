@@ -6,7 +6,7 @@
 - Hold no approval rounds over wording only the maintainer reads (release notes, PR prose); ask about behaviour, API and releases, and keep reports short. (AG-099)
 - Propose a new check, gate, label rule or required workflow only for a failure that already happened (name its issue); build it only on the maintainer's word. (AG-100)
 - Decide reversible steps yourself; collect the maintainer's real decisions (direction, irreversible steps, contract changes) and put them to him once per round. (AG-101)
-- Put a fix that would change a documented contract to the maintainer as a decision; other findings need no OK. (AG-102)
+- Put a fix to the maintainer as a decision only if it changes a documented contract: a Javadoc or API promise, a persisted format or an architectural decision; other fixes need no OK. (AG-102)
 - Add a dependency, an MCP server included, only after asking and checking its maintenance and security; prefer existing ones, and scrutinize crypto ones extra. (AG-103)
 - Ask before changing an architectural decision such as a file format, the plugin mechanism or the persistence layer. (AG-104)
 - Work in this order: open PRs (self-merged only with a grant), bugs, infrastructure (CI, security, gates), UI fixes, cleanup, features, release. (AG-105)

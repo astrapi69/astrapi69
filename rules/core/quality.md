@@ -7,5 +7,5 @@
 - Never delete, comment out, weaken or disable an existing test to make the build green. (RL-003)
 - Keep the project's everyday gate green after every change; no exception to test-first lifts this. (RL-004)
 - Never run mutation testing locally, not as an agent, subagent or workflow stage; it runs in the repository's CI workflow, and its numbers come from that run. (RL-005)
-- Pick what to depend on in this order in every project: the JDK and the language, then the family's libraries, then third-party libraries. (RL-098)
-- Before writing a class, helper, constant or enum, grep the family's local checkouts (do not guess) and use what exists; writing it again needs a stated reason. (RL-099)
+- Take cryptographic primitives only from the JDK or Bouncy Castle; otherwise depend first on the JDK, the language and the project's framework, then the family, then third-party libraries. (RL-098)
+- Before writing a class, helper, constant or enum, grep the family's local checkouts and use what exists; a rewrite states why in the commit message and the PR. (RL-099)

@@ -26,3 +26,4 @@ Read on demand; the rules every session needs are in core/.
 - Check pinned CI actions each quarter or after a platform deprecation: read the runtime from action.yml, pin the lowest new major that meets the target, one commit per action class. (DC-080)
 - Treat Claude Code's rule loading (every rule file injected whatever its frontmatter) as behaviour seen on a date: recheck it on a major version or a visible change and update the date. (DC-081)
 - Derive a repository's root from the working directory (git rev-parse --show-toplevel), never from the script's own location. (DC-082)
+- Make a check the maintainer decided to build exit non-zero on the failure it guards, and prefer a precise diff of the guarded artifact over a coarse presence check. (OC-008)
