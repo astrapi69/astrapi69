@@ -20,7 +20,7 @@
 - Never stop or kill a Gradle daemon, not even an idle one of another session; to keep builds apart, an agent or worktree may use its own GRADLE_USER_HOME. (AG-024)
 - Chain dependent shell steps with && and never with ;, and never pipe a check through | tail or anything else that hides its exit code. (DC-060)
 - Park a question in a document as TODO(clarify): <question> only within the session; before the merge answer each one or turn it into an issue (TODO(#NN)). (OC-003)
-- As a subagent, report a finding with its reproducing test to the session that dispatched you; that session files the issue without asking. (DZ-001)
+- As a subagent, report a finding with its reproducing test to the session that dispatched you; that session fixes it, or files the issue under NW-016. (DZ-001)
 - Run shell commands as bash -c '...' with the commands written out; use a script file only when it is committed. A go before each round is adaptive-learner's own rule. (DZ-002)
 
 ## The Agenten-Board
@@ -53,3 +53,12 @@
 ## Where rules live
 
 - Write a working rule only into these rule files (public) or the private part, commit and push it; never into an agent's memory, which holds only a project's state of work. (NW-012)
+
+## Findings
+
+- Finding means fixing: a bug or a small improvement you find in the repository you work on, fix in the same session, test first, in its own PR, merged when green. (NW-015)
+- File an issue instead only when the fix needs the maintainer's decision (a documented contract), depends on something external or is too big for the session; give the reason and the next step. (NW-016)
+- The Boy Scout rule holds in the repository the session works on; its only limit is a documented contract (Javadoc or API promise, persisted format, architectural decision): then a decision for the maintainer instead of a fix. (NW-019)
+- Propose a change outside the task first only when it is in another repository or changes a documented contract; everything else in the repository you work on you fix. (NW-020)
+- Hand a finding in another repository to the session that owns that repository; that session fixes it. (NW-017)
+- Name in every final report the issues opened and closed in the session; the goal is at least as many closed as opened. (NW-018)
