@@ -26,7 +26,7 @@
 - Treat a check that has not reported as not green: wait for every required check on the head, and read check runs, not commit statuses (codecov reports late). (AG-077)
 - Merge your own PR only with the maintainer's grant for that repository and milestone; with it, merge without asking once every check on the head is green. (AG-078)
 - After every merge check that the issue is closed and that the change landed on the target branch (`git log origin/develop -- <path>`); report a mismatch. (AG-079)
-- Do GitHub write steps (merge, tag, release, advisory, comment) with gh and the project's scripts and their checks, never through an MCP server. One exception, granted by the maintainer on 2026-11-07: a cloud session may use the platform's GitHub tool (MCP) to remove the AI line the cloud environment appends to a PR or issue body, and for nothing else. (AG-080)
+- Do GitHub write steps (merge, tag, release, advisory, comment) with gh and the project's scripts and their checks, never through an MCP server. One exception, granted by the maintainer on 2026-11-07: a cloud session may use the platform's GitHub tool (MCP) to remove the AI line the cloud environment appends to a PR or issue body or to a comment, and for nothing else. (AG-080)
 - Open an issue only for a finding NW-016 names; label it bug if it is a defect, and give its reproducing test where there is one. (AG-081)
 - Before filing, search the issues in all states and the other sessions' recent issues and open PRs; reopen a recurring closed issue instead of a duplicate. (AG-082)
 - Verify the premise before filing: re-check the finding on develop, and if the defect does not exist, report that instead; a false issue is worse than none. (AG-083)
