@@ -18,3 +18,4 @@ Read on demand; the rules every session needs are in core/.
 - Make a helper that bulk-deletes, wipes or drops data refuse to run on production-marked data unless an explicit override is set. (AG-048)
 - State in UI texts and docs what data leaves the device; never promise that no personal data is sent. (AG-049)
 - Close a Dependabot alert on a test- or build-only dependency as tolerable_risk with the measured chain and an issue, then fix it at low priority; any other dismissal needs the maintainer's yes. (AG-050)
+- Triage Dependabot alerts one row per package and manifest: version, scope (runtime, test, build), direct or transitive with the pulling package, severity, first fixed version, fix route; critical first; kept private. (NW-022)
