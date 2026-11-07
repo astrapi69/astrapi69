@@ -8,5 +8,5 @@
 - Measure each number or claim you report in the same session and cite its command; memory, grep or a quoted number is a lead, and an unmeasured claim says so. (DC-004)
 - Write no chat journal into a public repository, not even as fallback: it lives only in the maintainer's private repository, or the entry fails with a message. (DC-005)
 - Never edit a CHANGELOG yourself: collect grouped bullets written for humans, not raw commit messages, privately for the release PR, which takes them over. (DC-007)
-- Apply the Boy Scout rule only to small fixes without a change of behaviour in lines the task changes anyway; propose anything else to the maintainer first. (DC-037)
+- Leave the code you touch cleaner than you found it: fix bugs, sharpen weak tests, correct wrong docs, remove dead code, each with a test, in the same or its own PR. (DC-037)
 - Write no journal entry per session: the board and the pull requests are the record; a journal entry only at a milestone, privately in the maintainer's notes repository. (DZ-003)

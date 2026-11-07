@@ -11,7 +11,7 @@ Read on demand; the rules every session needs are in core/.
 - Crash early: validate input at the top with guard clauses instead of deep nesting. (DC-033)
 - Pass data shared between functions in a small typed structure (record, class, dataclass), not in loose maps or dicts. (DC-034)
 - Treat hard to test as a design verdict: a function that needs a pile of mocks is cut wrong and is split, and each extracted helper takes plain parameters and is testable alone. (DC-035)
-- Extract logic or a constant instead of copying it to a second place; three copies are refactored, in the change when they lie in lines the task touches, otherwise as a proposal. (DC-036)
+- Extract logic or a constant instead of copying it to a second place; refactor three copies in the repository you work on, with their tests. (DC-036)
 - Split a god class or file instead of whitelisting it; whitelist only a single-concern file such as a model, a schema or static data. (DC-038)
 - Handle an error at the layer that can act on it: lower layers throw meaningful exceptions and pass up what they cannot handle, and the UI shows the user an actionable message. (DC-039)
 - Never swallow an exception: log or handle it, rethrow with context or let it propagate, and catch broadly only where no specific type exists, with the reason in the code. (DC-040)

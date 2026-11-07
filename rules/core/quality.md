@@ -3,7 +3,7 @@
 # Tests, quality and dependencies
 
 - Test first for every change of behaviour or logic: a failing test before any production code, then only the code that passes it, then refactor with tests green. (RL-001)
-- Start every bug fix with a test that reproduces the bug and is red on the unfixed code; the fix turns it green, and the test stays as a regression guard. (RL-002)
+- Fix in two commits: first a test that pins today's behaviour and is green, then the fix that turns its assertions; every commit stays green, bisect works, the change shows in the fix's diff. (RL-002)
 - Never delete, comment out, weaken or disable an existing test to make the build green. (RL-003)
 - Keep the project's everyday gate green after every change; no exception to test-first lifts this. (RL-004)
 - Never run mutation testing locally, not as an agent, subagent or workflow stage; it runs in the repository's CI workflow, and its numbers come from that run. (RL-005)
