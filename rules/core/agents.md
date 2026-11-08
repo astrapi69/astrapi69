@@ -26,15 +26,16 @@
 ## The Agenten-Board
 
 - Put every task on the Agenten-Board when you start it: status In Arbeit and the field Agent set (for example "cc silly-collection", "ccw lethenon"); a task without an issue gets a draft item. (NW-001)
-- Set Wartet auf Aster while you wait for the maintainer, and leave Erledigt to the board's automation, which sets it when the issue is closed or the pull request merged. (NW-002)
+- Set Wartet auf Owner while you wait for the maintainer (the owner), and leave Erledigt to the board's automation, which sets it when the issue is closed or the pull request merged. (NW-002)
 - Keep in STATUS.md only the state and context the board cannot hold; for the state of the work STATUS.md points to the board. (NW-003)
+- A cloud session does not reach the board (its proxy allows repos/* only) and uses no board token: it sets the label status:in-arbeit, status:wartet-auf-owner or status:wartet-auf-rechner on the issue or PR, and lists a task without an issue as a row of the section ccw in STATUS.md; cc's local sync carries both to the board every 5 minutes, with Agent ccw. (NW-023)
 
 ## Access
 
 | Who | Can read | Cannot |
 |---|---|---|
 | cc, a local session | the local checkouts, the public and the private repositories, the private notes, the Agenten-Board | secret values |
-| ccw, a cloud session | the public rules and the repositories the Claude GitHub App is installed on | the local machine, secret values |
+| ccw, a cloud session | the public rules and the repositories the Claude GitHub App is installed on | the local machine, the Agenten-Board (NW-023), secret values |
 | Claude in the chat | public URLs only | everything else |
 | the maintainer | everything, and only he sets secrets | |
 
@@ -46,8 +47,8 @@
 ## When the maintainer is travelling
 
 - When the maintainer is travelling only ccw works: there is no cc as a bridge and no local terminal. (NW-008)
-- ccw reads directly the public rules, the maintainer's private notes repository (STATUS.md, the collection files) and the Agenten-Board. (NW-009)
-- A task that needs the local machine (setting secrets, local files, a local build with the gate on the pinned JDK, a repository ccw cannot reach) ccw sets to Wartet auf Rechner with a short description, and works on. (NW-010)
+- ccw reads directly the public rules and the maintainer's private notes repository (STATUS.md, the collection files); the board it reaches only through labels and the section ccw (NW-023). (NW-009)
+- A task that needs the local machine (setting secrets, local files, a local build with the gate on the pinned JDK, a repository ccw cannot reach) ccw sets to Wartet auf Rechner with a short description (the label status:wartet-auf-rechner, or that status in its row of the section ccw), and works on. (NW-010)
 - Back at the machine, cc takes the items in Wartet auf Rechner first. (NW-011)
 
 ## Where rules live
