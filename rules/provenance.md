@@ -208,7 +208,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | NW-018 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-019 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-020 | NEW | decision of the maintainer 2026-11-06 |  |
-| NW-021 | NEW | decision of the maintainer 2026-11-07 (two agents committed in the same checkout of the private notes; a pull broke off mid-way) |  |
+| NW-021 | NEW | decision of the maintainer 2026-11-07 (two agents committed in the same checkout of the private notes; a pull broke off mid-way); conflicts of the same content, decided by his instruction, resolved by the agent: decision of the maintainer 2026-11-08 (the section ccw of STATUS.md, cc against ccw) |  |
 | NW-022 | NEW | decision of the maintainer 2026-11-07 (the triage pattern had to be rebuilt from a chat message for bibliogon#1047) |  |
 | NW-023 | NEW | decision of the maintainer 2026-11-08 (ccw's proxy allows repos/* only, so the board's GraphQL API is out of its reach; the board token of the cloud sessions is dropped) |  |
 | OC-002 | AL-160, AL-315, AL-345 | adaptive-learner:.claude/rules/ai-workflow/documentation-protocol.md:196@723bf62bb; adaptive-learner:.claude/rules/release-workflow.md:12-14@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:49@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:435-437@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:530@c148b6ea0 | D1: AL-345 records a deviation in the chat journal, which D1 keeps only privately in chats-with-ai (the release PR of the case recommendation is named by no source); safety items stay unskippable (RL-055) |
