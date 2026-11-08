@@ -189,7 +189,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | DZ-002 | AL-132, AL-133, FR-075, AG-023 | decision of the maintainer 2026-11-06 (doubtful case G1-2) | maintainer, doubtful case G1-2 |
 | DZ-003 | AL-134, AL-136, PR-055, D1 | decision of the maintainer 2026-11-06 (doubtful case G3-5) | maintainer, doubtful case G3-5 |
 | NW-001 | NEW | decision of the maintainer 2026-11-06 |  |
-| NW-002 | NEW | decision of the maintainer 2026-11-06 |  |
+| NW-002 | NEW | decision of the maintainer 2026-11-06; the status Wartet auf Aster renamed Wartet auf Owner, as its label status:wartet-auf-owner, 2026-11-08 |  |
 | NW-003 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-004 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-005 | NEW | decision of the maintainer 2026-11-06 |  |

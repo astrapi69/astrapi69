@@ -26,9 +26,9 @@
 ## The Agenten-Board
 
 - Put every task on the Agenten-Board when you start it: status In Arbeit and the field Agent set (for example "cc silly-collection", "ccw lethenon"); a task without an issue gets a draft item. (NW-001)
-- Set Wartet auf Aster while you wait for the maintainer, and leave Erledigt to the board's automation, which sets it when the issue is closed or the pull request merged. (NW-002)
+- Set Wartet auf Owner while you wait for the maintainer (the owner), and leave Erledigt to the board's automation, which sets it when the issue is closed or the pull request merged. (NW-002)
 - Keep in STATUS.md only the state and context the board cannot hold; for the state of the work STATUS.md points to the board. (NW-003)
-- A cloud session does not reach the board (its proxy allows repos/* only) and uses no board token: it sets the label status:in-arbeit, status:wartet-auf-aster or status:wartet-auf-rechner on the issue or PR, and lists a task without an issue as a row of the section ccw in STATUS.md; cc's local sync carries both to the board every 5 minutes, with Agent ccw. (NW-023)
+- A cloud session does not reach the board (its proxy allows repos/* only) and uses no board token: it sets the label status:in-arbeit, status:wartet-auf-owner or status:wartet-auf-rechner on the issue or PR, and lists a task without an issue as a row of the section ccw in STATUS.md; cc's local sync carries both to the board every 5 minutes, with Agent ccw. (NW-023)
 
 ## Access
 
