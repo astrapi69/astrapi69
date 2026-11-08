@@ -28,6 +28,7 @@
 - After every merge check that the issue is closed and that the change landed on the target branch (`git log origin/develop -- <path>`); report a mismatch. (AG-079)
 - Do GitHub write steps (merge, tag, release, advisory, comment) with gh and the project's scripts and their checks, never through an MCP server. One exception, granted by the maintainer on 2026-11-07: a cloud session may use the platform's GitHub tool (MCP) to remove the AI line the cloud environment appends to a PR or issue body or to a comment, and for nothing else. (AG-080)
 - Open an issue only for a finding NW-016 names; label it bug if it is a defect, and give its reproducing test where there is one. (AG-081)
+- Write every issue with the problem, its reproduction or evidence, the proposed fix and the precedent or best practice behind it with a source (a JDK contract, Commons, OWASP, a specification); only where there is a real choice add numbered options with a recommendation and its reason, built like AG-098 and after MADR, never invented options for an unambiguous defect. (AG-114)
 - Before filing, search the issues in all states and the other sessions' recent issues and open PRs; reopen a recurring closed issue instead of a duplicate. (AG-082)
 - Verify the premise before filing: re-check the finding on develop, and if the defect does not exist, report that instead; a false issue is worse than none. (AG-083)
 - Use P0-P5 for urgency only (P0 now, P1 next, P2 soon, P3 when capacity allows, P4 later, P5 speculative); kind and severity get own labels (bug, security). (AG-084)
