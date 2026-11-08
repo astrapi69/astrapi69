@@ -11,7 +11,7 @@
 - Never stash in commands, scripts or loops (all worktrees share the stash stack); set work aside in a WIP commit, and let a repo loop skip and name a dirty one. (AG-062)
 - Stage only your own files, each by its path; never `git add -A`, `git add .` or a directory, since builds, tools and other sessions leave files behind. (AG-063)
 - Work in every repository, the private notes too, only in ../<repo>-worktrees/<name>; briefs and logs go to ../<repo>-worktrees/_work/; remove merged worktrees. (AG-064)
-- In a repository without PRs (the private notes), commit on your own short-lived branch, merge main into it, push it to main; on a conflict stop and report. (NW-021)
+- In a repository without PRs (the private notes), commit on your own short-lived branch, merge main into it, push it to main. A conflict where both sides say the same and an instruction of the maintainer decides between the older and the newer version you resolve that way and name in the report; when the versions contradict each other and no instruction decides, stop and report. (NW-021)
 - Write Conventional Commits (feat, fix, refactor, docs, test, chore, build) with a scope where it is clear. (AG-065)
 - Make each commit one logical change and the smallest reversible unit that is green on its own; when a split breaks the build, keep the pieces in one commit. (AG-066)
 - In the commit and PR body explain why; the diff already shows what. (AG-067)
