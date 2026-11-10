@@ -8,6 +8,7 @@
 - Inspect a proposed mass edit (global sed, regex sweep) instead of running it: read each match, apply the changes one by one and diff the result. (AG-007)
 - Never guess: answer an unclear point from evidence, else park it under the most cautious assumption and go on; stop and ask only if it blocks or risks damage. (AG-008)
 - End the final report with the parked questions (where, which assumption), the answers found in evidence (source) and how each blocking question was resolved. (AG-009)
+- End every report to the maintainer, after the questions AG-009 closes with, with the instructions he gave since the last report: verbatim, dated, each with its state (done, in progress, not started), 'none' when there are none; never quote a secret. (NW-024)
 - Answer the question asked before starting a fix; be direct and factual, say when something breaks the architecture rather than work around it, mark suggestions. (AG-010)
 - Report results, not launches: after each finished item give its measured result, and let an interim note name only what is already measured. (AG-011)
 - Check a brief or dispatch prompt against the repo's rules; surface a conflict before acting, and deviate only when the user overrides the rule in this session. (AG-013)
