@@ -37,7 +37,8 @@ each project; the software is provided without warranty.
   READMEs of [mystic-crypt](https://github.com/astrapi69/mystic-crypt#verifying-the-release-signatures)
   and [Lethenon](https://github.com/astrapi69/lethenon#verifying-the-release-signatures)
 
-Since November 2026, commits and pull requests carry no AI attribution line; this page says it once, for all of
-them. Older commits and pull requests may still carry one.
+Commits and pull requests made with an AI agent may name it: a Co-Authored-By trailer, a link to the session, a
+"Generated with" line. This page says for all of them how the projects are made. For a while in November 2026
+such lines were kept out of commits and pull requests; that rule is withdrawn.
 
 Asterios Raptis
