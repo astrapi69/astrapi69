@@ -22,7 +22,7 @@
 - Skip the PR only when no committed file changed, in a release freeze (a release-blocking P0 hotfix excepted), or when the user said 'push only, no PR' for it. (AG-074)
 - Keep one concern per PR; a changeset that is only docs or only translations gets its own PR and is not mixed into a feature. (AG-075)
 - Merge only through the PR, never by pushing onto develop, and never with `--admin` or with admin enforcement switched off; both are the maintainer's acts. (AG-076)
-- Treat a check that has not reported as not green: wait for every required check on the head, and read check runs, not commit statuses (codecov reports late). (AG-077)
+- Treat a check that has not reported as not green: wait for every required check on the head, and read check runs, not commit statuses (codecov reports late). Judge SUCCESS over the required checks: NEUTRAL or SKIPPED of a non-required check is named and does not block, a red non-required check blocks until deliberately overridden. (AG-077)
 - Merge your own PR without asking once every check on its head is green, GitGuardian included (AG-090): a standing grant of the maintainer for every repository on the relevance list. Tags, releases and merges during a release freeze stay outside it and need his grant for that release (RL-054); a repository off the list needs his grant for that repository. (AG-078)
 - After every merge check that the issue is closed and that the change landed on the target branch (`git log origin/develop -- <path>`); report a mismatch. (AG-079)
 - Do GitHub write steps (merge, tag, release, advisory, comment) with gh and the project's scripts and their checks, never through an MCP server. (AG-080)
