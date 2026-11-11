@@ -8,3 +8,4 @@
 - Never let a secret or plaintext reach a message, the chat, a log or build output. (AG-035)
 - Pass a secret by standard input, a hidden prompt or an environment variable of the one process, never as a command-line argument. (AG-036)
 - Before a repository is opened to cloud agents, and once a month for the private notes repository, scan its whole history for secrets (a tool such as gitleaks); report place and commit, never a value. (NW-014)
+- Delete a secret from a store (a CI secret, a keyring entry) only when it is proven that nothing reads it any more: every workflow on every branch, every unit and every script checked, with the command and its result recorded. (NW-025)
