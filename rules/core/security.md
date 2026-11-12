@@ -3,6 +3,7 @@
 # Security
 
 - Report a security vulnerability only in a private security advisory, never in a public issue, PR, commit or comment; a public issue follows the fixed release. (AG-032)
+- Whoever works privately on a security finding under AG-032 claims the public issue at once: the label status:in-arbeit and the board entry, with nothing about the finding in them; a second session then neither fixes nor describes it publicly. (AG-115)
 - Before a public text names a consumer's defect, read its SECURITY.md; hold a possible confidentiality or integrity hole in a release and tell the maintainer. (AG-033)
 - Never commit or write down a secret (key, real keystore, password, token, API key) in code, config, notes or docs; git-ignore .env, make test keys at runtime. (AG-034)
 - Never let a secret or plaintext reach a message, the chat, a log or build output. (AG-035)
