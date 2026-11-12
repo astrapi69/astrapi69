@@ -40,7 +40,7 @@ Read on demand; the rules every session needs are in core/.
 - Leave the Central Portal approval to the maintainer; publish the GitHub draft release yourself after verifying the artifacts on Central, in the order tag, approval, verification, draft published with the CHANGELOG text. (RL-089)
 - Give each family repository a README 'Releasing' section that names the master step, at its next release. (RL-092)
 - Branch a hotfix from the tag it patches (hotfix/X.Y.Z), tag its head, move master onto it, then merge the whole branch into develop (no cherry-picks); a hotfix never changes the build, release path or a persisted format. (RL-093)
-- After a release, build the tag locally and compare it with Maven Central: every published artifact is bit-identical. (RL-094)
+- After a release, build the tag locally and compare it with Maven Central: every published artifact is bit-identical. A double build that proves reproducibility runs its second build in a deliberately different environment - another language and region, another time zone, another directory - because two builds in the same environment miss what the environment writes into the bytes, as the machine's locale did into the 13.10 javadoc jar. (RL-094)
 - Open the next cycle in the same session as the tag by setting the version to the next one with a -SNAPSHOT suffix. (RL-095)
 - After a release, check the CHANGELOG links, mark released roadmap items, act on the waiting entries the tag unblocks, update CLAUDE.md if the architecture changed, and record release pitfalls as lessons. (RL-096)
 - Class a data format change that older versions read only in part as a minor while the new version reads all older data, and name what older versions lose in the release notes' compatibility section. (RL-097)

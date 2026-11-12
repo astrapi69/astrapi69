@@ -311,7 +311,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | RL-091 | FR-080, PR-155, AL-310, AL-311 | agent memory (private); the maintainer's private notes @37f0a69; mystic-crypt-ui:.claude/rules/release-workflow.md:123-131@55d2cc37; adaptive-learner:.claude/rules/release-workflow.md:18-32@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:34-36@c148b6ea0 | PRE (cc): SSOT split general/project: the Java family follows RL-091 (moved from releases to java-family); a project's own release path, such as adaptive-learner's release/* to main (AL-310, AL-311), stays in its own rules |
 | RL-092 | FR-080 | agent memory (private); the maintainer's private notes @37f0a69 |  |
 | RL-093 | PR-119 | mystic-crypt-ui:.claude/rules/release-workflow.md:20-29@55d2cc37; mystic-crypt-ui:.claude/rules/ai-workflow/pr-policy.md:26-29@e31faeb8 |  |
-| RL-094 | FR-022 | the maintainer's private notes @c01fb82; the maintainer's private notes @24832bb; agent memory (private) |  |
+| RL-094 | FR-022 | the maintainer's private notes @c01fb82; the maintainer's private notes @24832bb; agent memory (private); the differing environment: decision of the maintainer 2026-11-12, after mystic-crypt#304 |  |
 | RL-095 | PR-156 | mystic-crypt-ui:.claude/rules/release-workflow.md:136-142@55d2cc37 |  |
 | RL-096 | PR-124, AL-338 | mystic-crypt-ui:.claude/rules/release-workflow.md:143-144@55d2cc37; adaptive-learner:.claude/rules/release-workflow.md:413-427@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:481-486@c148b6ea0 | D1 |
 | RL-097 | AL-343 | adaptive-learner:.claude/rules/release-workflow.md:524@c148b6ea0 |  |
