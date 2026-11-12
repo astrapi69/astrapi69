@@ -343,4 +343,4 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | RL-124 | PR-158 | mystic-crypt-ui:.claude/rules/lessons-learned.md:69-73@ea37b736 |  |
 | RL-125 | FR-054 | agent memory (private); the maintainer's private notes @527e8d3 |  |
 | RL-126 | PR-135 | mystic-crypt-ui:.claude/rules/coding-standards.md:19@a7c69787 |  |
-| RL-127 | NEW | decision of the maintainer 2026-11-11 (Bouncy Castle 1.87 stood in the 13.10 release candidate on the day it reached Maven Central, with its release notes not yet published) |  |
+| RL-127 | NEW | decision of the maintainer 2026-11-11 (Bouncy Castle 1.87 stood in the 13.10 release candidate on the day it reached Maven Central, with its release notes not yet published); the family exemption: maintainer, 2026-11-12 |  |
