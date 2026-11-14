@@ -337,7 +337,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | RL-117 | PR-153 | mystic-crypt-ui:.claude/rules/release-workflow.md:7-9@55d2cc37 |  |
 | RL-118 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb |  |
 | RL-119 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb |  |
-| RL-120 | FR-084 | agent memory (private); the maintainer's private notes @37f0a69 |  |
+| RL-120 | FR-084 | agent memory (private); the maintainer's private notes @37f0a69; the start of every cycle: maintainer, 2026-11-14 |  |
 | RL-121 | PR-159 | mystic-crypt-ui:.claude/rules/lessons-learned.md:128-133@ea37b736 |  |
 | RL-122 | PR-154 | mystic-crypt-ui:.claude/rules/release-workflow.md:111-115@55d2cc37; mystic-crypt:CLAUDE.md:44@7ed18b3a |  |
 | RL-123 | PR-161 | mystic-crypt-ui:.claude/rules/release-workflow.md:83-92@55d2cc37 |  |
