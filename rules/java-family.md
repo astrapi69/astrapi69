@@ -26,7 +26,7 @@ Read on demand; the rules every session needs are in core/.
 - Build a release with the JDK the repository pins, and take a newer JDK patch release deliberately in a small PR of its own that passes the gate, never automatically. (RL-117)
 - Raise a family repository to the current Gradle when it is touched anyway, in its own commit: wrapper generated twice, its jar checked against the published sha256, .gitattributes, no --warning-mode all deprecation left. (RL-118)
 - Raise silly-io and file-worker to 4.0 and 20.0 in the same change as the Gradle update of a repository that declares them. (RL-119)
-- Run versionCatalogUpdate (stable selector) in a library before the release PR, with test counts before and after; fix a test that no longer compiles, never disable it, and build no gate or tool for this. (RL-120)
+- Run the dependency currency check (versionCatalogUpdate with the stable selector, or dependencyUpdates) at the start of every cycle, right after the release that opened it, and again before the release PR; lift what RL-127 lets in, with test counts before and after; fix a test that no longer compiles, never disable it, and build no gate or tool for this. (RL-120)
 - Judge a transitive bump by the end-to-end suite, not by compilation: Gradle resolves a version conflict to the higher version whatever the consumer pins. (RL-121)
 - Use release tags of the shape RELEASE-<projectVersion>, never vX.Y, made with the tagging target (./gradlew tagRelease, make tag-release) and never retyped from prose. (RL-122)
 - Force only the test tasks in the release gate, each by name with its own --rerun, never --rerun-tasks; CI builds without --rerun. (RL-123)
