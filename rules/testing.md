@@ -4,7 +4,7 @@
 
 Read on demand; the rules every session needs are in core/.
 
-- Make the error reproducible and understand its cause before fixing it, and land the reproducing test in the same commit as the fix. (RL-006)
+- Make the error reproducible and understand its cause before fixing it; the commits of the fix take the form RL-002 gives them. (RL-006)
 - Change code in this order: read and understand its existing tests, write the failing test, implement, keep the suite green, commit, push and open the PR. (RL-007)
 - Prove that a test bites with a counter-run: break the code under test on purpose, watch the right test fail, then revert. (RL-008)
 - Write at least the happy path and one error case for a new method or function (one happy-path test for a new endpoint), and aim at four tests for a feature or fix: reproduction, happy path, edge cases, boundary values. (RL-009)
