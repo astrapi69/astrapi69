@@ -98,7 +98,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | AG-105 | AL-060, AL-129, PR-011 | adaptive-learner:.claude/rules/vibe-coding.md:35-45@64f0aa79f; adaptive-learner:.claude/rules/ai-workflow/implementation-workflow.md:96-97@2e80068c7; mystic-crypt-ui:.claude/rules/vibe-coding.md:32-42@3bc21f0c; mystic-crypt:.claude/rules/workflow.md:34-41@7ed18b3a | D9 (resolves cross-source 9) |
 | AG-106 | FR-071 | agent memory (private) |  |
 | AG-107 | AL-385, PR-014 | adaptive-learner:.claude/rules/lessons/core.md:189-198@1d8158786; mystic-crypt-ui:.claude/rules/architecture.md:60-65@c2a1a839 |  |
-| AG-108 | PR-039 | mystic-crypt-ui:.claude/rules/ai-workflow/github-issue-policy.md:55-65@e1ae46bc |  |
+| AG-108 | PR-039, NEW | mystic-crypt-ui:.claude/rules/ai-workflow/github-issue-policy.md:55-65@e1ae46bc; the review against the decision's wording before the merge: maintainer, 2026-11-15 (occasion: lethenon#322 implemented the decision of lethenon#296 and differed from it in one point, the moment lastTry is set) |  |
 | AG-109 | FR-061 | agent memory (private); the maintainer's private notes @7975255; the maintainer's private notes @300e8e8; the maintainer's private notes @d4b9276 |  |
 | AG-110 | AL-320, AL-321, PR-120 | adaptive-learner:.claude/rules/release-workflow.md:56-75@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:90@c148b6ea0; adaptive-learner:.claude/rules/release-workflow.md:445@c148b6ea0; mystic-crypt-ui:.claude/rules/release-workflow.md:31-36@55d2cc37 |  |
 | AG-111 | AL-460 | adaptive-learner:.claude/rules/lessons/release-packaging.md:54-57@64f0aa79f |  |

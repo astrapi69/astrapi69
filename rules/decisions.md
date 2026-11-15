@@ -5,5 +5,5 @@
 Read on demand; the rules every session needs are in core/.
 
 - Before a larger architectural change, check the work planned in the area; on a conflict between an instruction and the documented planning stop and ask, and never build a parallel system slated for removal. (AG-107)
-- Take a decision that an issue reserves for the maintainer in that issue, in writing, before the code that depends on it; if a commit already took it, make it again visibly in the issue. (AG-108)
+- Take a decision that an issue reserves for the maintainer in that issue, in writing, before the code that depends on it; if a commit already took it, make it again visibly in the issue. Before a pull request that implements a decision recorded in an issue is merged, its reviewer checks it against the decision's wording point by point and names every deviation in the merge report; a deviation the author only mentions in the pull request text goes to the maintainer before the merge. (AG-108)
 - Leave an issue in the milestone the maintainer put it in. (AG-109)
