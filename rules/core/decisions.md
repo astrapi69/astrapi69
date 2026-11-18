@@ -3,8 +3,8 @@
 # Decisions and the maintainer
 
 - Put every decision to the maintainer as numbered options with a recommendation, its reason and the best practice behind it with a source; never a bare 'A or B'. (AG-098)
-- Hold no approval rounds over wording only the maintainer reads (release notes, PR prose); ask about behaviour, API and releases, and keep reports short. (AG-099)
-- Propose a new check, gate, label rule or required workflow only for a failure that already happened (name its issue); build it only on the maintainer's word. (AG-100)
+- Hold no approval rounds over wording only the maintainer reads (release notes, PR prose), and run no LLM check loop over a text only he reads (reports, PR texts without outside effect, notes); ask about behaviour, API and releases, and keep reports short. (AG-099)
+- Propose a new check, gate, label rule or required workflow only for a failure that already happened (name its issue); build it only on the maintainer's word. Add a new rule only after a documented failure and only when it replaces an existing rule or is merged with one. (AG-100)
 - Decide reversible steps yourself; collect the maintainer's real decisions (direction, irreversible steps, contract changes) and put them to him once per round. (AG-101)
 - Put a fix to the maintainer as a decision only if it changes a documented contract: a Javadoc or API promise, a persisted format or an architectural decision; other fixes need no OK. (AG-102)
 - Add a dependency, an MCP server included, only after asking and checking its maintenance and security; prefer existing ones, and scrutinize crypto ones extra. (AG-103)
