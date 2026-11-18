@@ -334,7 +334,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | RL-113 | FR-019 | the maintainer's private notes @24832bb; agent memory (private) |  |
 | RL-114 | FR-020 | agent memory (private) |  |
 | RL-115 | FR-021 | the maintainer's private notes @24832bb; agent memory (private); the maintainer's private notes @c01fb82 |  |
-| RL-116 | FR-022, PR-153 | the maintainer's private notes @c01fb82; the maintainer's private notes @24832bb; agent memory (private); mystic-crypt-ui:.claude/rules/release-workflow.md:7-9@55d2cc37 |  |
+| RL-116 | FR-022, PR-153 | the maintainer's private notes @c01fb82; the maintainer's private notes @24832bb; agent memory (private); mystic-crypt-ui:.claude/rules/release-workflow.md:7-9@55d2cc37; the gate at each repository's next release, as -Werror: maintainer, 2026-11-18 (occasion: the RL-127 bump drafts of 2026-11-18 found mavenLocal() ungated in 11 of 17 consumers, and two jars in ~/.m2 that differ from the Maven Central ones of the same version) |  |
 | RL-117 | PR-153 | mystic-crypt-ui:.claude/rules/release-workflow.md:7-9@55d2cc37 |  |
 | RL-118 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb |  |
 | RL-119 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb |  |
