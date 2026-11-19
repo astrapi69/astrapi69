@@ -20,7 +20,6 @@ Read on demand; the rules every session needs are in core/.
 - Add a lesson to the lessons-learned file when a bug came from a wrong pattern, a workaround for a library limit was found, a workflow gap surfaced or a release brought something noteworthy. (DC-020)
 - Treat the rule corpus as a cost, since every rule file is injected into every prompt: a new or grown section trades space (condense or delete first) or the commit message says what it bought. (DC-021)
 - Hold a PR framed as cleanup, reflow or condensation to the standard of a content change: nothing deleted silently, no rule weakened, every normative change declared in the PR body or commit message. (DC-022)
-- Give a document written before the English rule a Language: line saying so instead of translating it for its own sake. (DC-023)
 - Give each repository agents have worked on since 2026 a README section "How this project is made" that links to the one project-wide AI_USAGE.md in the profile repository. (DC-024)
 - Leave the GitHub About sections (description, website, topics) of the family's repositories as they are until the maintainer asks to unify them in one go. (DC-025)
 - Put German notes written for the maintainer, such as explorations, into his private notes repository, never into a public repository. (OC-007)

@@ -26,7 +26,6 @@ Read on demand; the rules every session needs are in core/.
 - Let the build of every family library compare its jar with its last published release by japicmp, as part of ./gradlew build, through the family pattern gradle/api-compatibility.gradle of crypt-data: a minor or patch release fails on any binary or source incompatible change, unless a documented entry in the repository's japicmp configuration (the element, the reason and the issue) accepts it; a major only reports them; a repository without the check gets it at its next release, as -Werror by RL-113. (RL-128)
 - Build a release with the JDK the repository pins, and take a newer JDK patch release deliberately in a small PR of its own that passes the gate, never automatically. (RL-117)
 - Raise a family repository to the current Gradle when it is touched anyway, in its own commit: wrapper generated twice, its jar checked against the published sha256, .gitattributes, no --warning-mode all deprecation left. (RL-118)
-- Raise silly-io and file-worker to 4.0 and 20.0 in the same change as the Gradle update of a repository that declares them. (RL-119)
 - Run the dependency currency check (versionCatalogUpdate with the stable selector, or dependencyUpdates) at the start of every cycle, right after the release that opened it, and again before the release PR; lift what RL-127 lets in, with test counts before and after; fix a test that no longer compiles, never disable it, and build no gate or tool for this. (RL-120)
 - Judge a transitive bump by the end-to-end suite, not by compilation: Gradle resolves a version conflict to the higher version whatever the consumer pins. (RL-121)
 - Use release tags of the shape RELEASE-<projectVersion>, never vX.Y, made with the tagging target (./gradlew tagRelease, make tag-release) and never retyped from prose. (RL-122)
@@ -36,7 +35,6 @@ Read on demand; the rules every session needs are in core/.
 - Write Java tests with JUnit Jupiter, with AssertJ-style fluent assertions where the neighbouring tests already use them. (RL-126)
 - Give every class, test classes included, and every public member Javadoc in the style of its neighbours, and keep an existing {@inheritDoc} as it is. (DC-026)
 - End a Javadoc sentence without a dot unless another sentence follows it. (DC-027)
-- Name Java classes in PascalCase, methods and fields in camelCase and constants in UPPER_SNAKE_CASE. (DC-028)
 - Declare a dependency you use directly in your own build, instead of inheriting it quietly through another one. (NW-013)
 
 ## Where to look

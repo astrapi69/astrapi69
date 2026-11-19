@@ -2,7 +2,7 @@
 
 # Where each rule comes from
 
-Every rule carries an id. This table names the inventory rows it was consolidated from and their places, with the commit. Private sources are named only as such. D1 to D10 are the maintainer's decisions of 2026-11-06 on contradictions between the sources; PRE marks a pre-decision by the same principles.
+Every rule carries an id. This table names the inventory rows it was consolidated from and their places, with the commit. Private sources are named only as such. D1 to D10 are the maintainer's decisions of 2026-11-06 on contradictions between the sources; PRE marks a pre-decision by the same principles. A Decision that says struck, merged into or withdrawn marks a rule that is no longer in the rule files; its row stays and its id is not reused.
 
 | Id | Sources | Provenance | Decision |
 |---|---|---|---|
@@ -130,12 +130,12 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | DC-020 | AL-158, PR-060 | adaptive-learner:.claude/rules/ai-workflow/documentation-protocol.md:178-183@723bf62bb; mystic-crypt-ui:.claude/rules/lessons-learned.md:3-5@ea37b736; mystic-crypt-ui:.claude/rules/release-workflow.md:143-144@55d2cc37 |  |
 | DC-021 | AL-299, PR-061 | adaptive-learner:.claude/rules/quality-checks.md:415-430@c8613cb90; adaptive-learner:.claude/rules/text-formatting.md:33-34@031ed4b50; mystic-crypt-ui:.claude/rules/quality-checks.md:94-98@1664bd63; mystic-crypt-ui:.claude/rules/vibe-coding.md:3-4@3bc21f0c |  |
 | DC-022 | AL-059, AL-292, PR-109 | adaptive-learner:.claude/rules/vibe-coding.md:30-33@64f0aa79f; adaptive-learner:.claude/rules/quality-checks.md:339-354@c8613cb90; adaptive-learner:.claude/rules/lessons/core.md:86-89@1d8158786; adaptive-learner:.claude/rules/quality-checks.md:302-317@c8613cb90; adaptive-learner:.claude/rules/quality-checks.md:351-352@c8613cb90; mystic-crypt-ui:.claude/rules/quality-checks.md:86-87@1664bd63; mystic-crypt:.claude/rules/quality-gates.md:31-37@bd3b48ce |  |
-| DC-023 | PR-054 | mystic-crypt-ui:.claude/rules/coding-standards.md:38-45@a7c69787 |  |
+| DC-023 | PR-054 | mystic-crypt-ui:.claude/rules/coding-standards.md:38-45@a7c69787 | struck 2026-11-19: done transitional rule, the only German document of mystic-crypt-ui carries its Language line and DC-001 governs new texts (rule inventory of 2026-11-18) |
 | DC-024 | PR-028, FR-044 | mystic-crypt-ui:.claude/rules/coding-standards.md:80-81@a7c69787; the maintainer's private notes @24832bb; the maintainer's private notes @b3c1ca5 | PRE: STATUS.md A63 (line 669) fixes the place as the profile repository and line 210 links there; the 2026-11-04 change replaced only the criterion of which repositories |
 | DC-025 | FR-070 | agent memory (private) |  |
 | DC-026 | PR-133, FR-163 | mystic-crypt-ui:.claude/rules/coding-standards.md:17@a7c69787; mystic-crypt:.claude/rules/coding-standards.md:13-15@bd3b48ce; the maintainer's private notes @e962842 |  |
 | DC-027 | FR-164 | the maintainer's private notes @e962842 |  |
-| DC-028 | PR-134 | mystic-crypt-ui:.claude/rules/coding-standards.md:27@a7c69787 |  |
+| DC-028 | PR-134 | mystic-crypt-ui:.claude/rules/coding-standards.md:27@a7c69787 | struck 2026-11-19: Java's own naming convention with no family content (rule inventory of 2026-11-18) |
 | DC-029 | AL-103, AL-208, PR-016, PR-062 | adaptive-learner:.claude/rules/tdd.md:35@b1b88440a; adaptive-learner:.claude/rules/ai-workflow/implementation-workflow.md:88@2e80068c7; adaptive-learner:.claude/rules/coding-standards.md:18@fdacfb376; mystic-crypt-ui:.claude/rules/ai-workflow/implementation-workflow.md:73@40b8c946; mystic-crypt-ui:.claude/rules/tdd.md:13@13444b67; mystic-crypt:.claude/rules/tdd.md:7@bd3b48ce; mystic-crypt-ui:.claude/rules/coding-standards.md:8@a7c69787; mystic-crypt:.claude/rules/coding-standards.md:3-4@bd3b48ce |  |
 | DC-030 | AL-222, PR-063, PR-064 | adaptive-learner:.claude/rules/coding-standards.md:54-56@fdacfb376; mystic-crypt-ui:.claude/rules/coding-standards.md:28-30@a7c69787; mystic-crypt:.claude/rules/coding-standards.md:20-22@bd3b48ce; mystic-crypt-ui:.claude/rules/coding-standards.md:31@a7c69787; mystic-crypt:.claude/rules/coding-standards.md:23@bd3b48ce |  |
 | DC-031 | AL-086 | adaptive-learner:.claude/rules/reusability.md:22@64f0aa79f |  |
@@ -179,7 +179,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | DC-070 | AL-290 | adaptive-learner:.claude/rules/quality-checks.md:269-281@c8613cb90; adaptive-learner:.claude/rules/gates.yaml:13-19@1c7b1c852; adaptive-learner:.claude/rules/gates.yaml:107-109@1c7b1c852 |  |
 | DC-071 | AL-296 | adaptive-learner:.claude/rules/quality-checks.md:382-392@c8613cb90 |  |
 | DC-072 | AL-441 | adaptive-learner:.claude/rules/lessons/ci-gates.md:148-152@c8613cb90 |  |
-| DC-073 | AL-300 | adaptive-learner:.claude/rules/quality-checks.md:439-453@c8613cb90 |  |
+| DC-073 | AL-300 | adaptive-learner:.claude/rules/quality-checks.md:439-453@c8613cb90 | struck 2026-11-19: contradicts the family practice, GitGuardian is an external service that runs on every PR as a merge condition (AG-090, AG-077); stays a project rule of adaptive-learner (rule inventory of 2026-11-18) |
 | DC-074 | AL-348, AL-444 | adaptive-learner:.claude/rules/gates.yaml:93@1c7b1c852; adaptive-learner:.claude/rules/checks.yaml:78@944633ba9; adaptive-learner:.claude/rules/lessons/ci-gates.md:216-222@c8613cb90 |  |
 | DC-075 | AL-358, AL-442, AL-443 | adaptive-learner:.claude/rules/checks.yaml:132-134@944633ba9; adaptive-learner:.claude/rules/lessons/ci-gates.md:181-184@c8613cb90; adaptive-learner:.claude/rules/lessons/ci-gates.md:185-188@c8613cb90; adaptive-learner:.claude/rules/lessons/ci-gates.md:189-192@c8613cb90 |  |
 | DC-076 | AL-469 | adaptive-learner:.claude/rules/lessons/release-packaging.md:135@64f0aa79f |  |
@@ -187,7 +187,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | DC-078 | AL-394 | adaptive-learner:.claude/rules/lessons/backend.md:49-51@fdacfb376 |  |
 | DC-079 | AL-434 | adaptive-learner:.claude/rules/lessons/ci-gates.md:79-84@c8613cb90 |  |
 | DC-080 | AL-433 | adaptive-learner:.claude/rules/lessons/ci-gates.md:23-77@c8613cb90 |  |
-| DC-081 | AL-046, AL-047 | adaptive-learner:.claude/rules/lessons-learned.md:16-32@fdf722721; adaptive-learner:.claude/rules/lessons-learned.md:34-38@fdf722721 |  |
+| DC-081 | AL-046, AL-047 | adaptive-learner:.claude/rules/lessons-learned.md:16-32@fdf722721; adaptive-learner:.claude/rules/lessons-learned.md:34-38@fdf722721 | struck 2026-11-19: not a rule but an observation about Claude Code, kept as a plain line without an id (rule inventory of 2026-11-18) |
 | DC-082 | AL-379 | adaptive-learner:.claude/rules/lessons/core.md:159@1d8158786 |  |
 | DZ-001 | AL-016, AG-081, DZ-001, NEW | decision of the maintainer 2026-11-06 (doubtful case G1-1); decision of the maintainer 2026-11-07 (finding means fixing) | maintainer, doubtful case G1-1; maintainer 2026-11-07 |
 | DZ-002 | AL-132, AL-133, FR-075, AG-023 | decision of the maintainer 2026-11-06 (doubtful case G1-2) | maintainer, doubtful case G1-2 |
@@ -199,8 +199,8 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | NW-005 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-006 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-007 | NEW | decision of the maintainer 2026-11-06 |  |
-| NW-008 | NEW | decision of the maintainer 2026-11-06 |  |
-| NW-009 | NEW | decision of the maintainer 2026-11-06 |  |
+| NW-008 | NEW | decision of the maintainer 2026-11-06 | struck 2026-11-19: not a rule but a statement of the situation, kept as a plain line without an id in the section on travelling (rule inventory of 2026-11-18) |
+| NW-009 | NEW | decision of the maintainer 2026-11-06 | struck 2026-11-19: not a rule, a description of access already said in the table Access, in NW-023 and in NW-104 (rule inventory of 2026-11-18) |
 | NW-010 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-011 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-012 | NEW | decision of the maintainer 2026-11-06 |  |
@@ -272,8 +272,8 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | RL-046 | AL-446 | adaptive-learner:.claude/rules/lessons/ci-gates.md:228@c8613cb90 |  |
 | RL-047 | AL-302, PR-102 | adaptive-learner:.claude/rules/quality-checks.md:475-478@c8613cb90; mystic-crypt-ui:.claude/rules/quality-checks.md:31-32@1664bd63; mystic-crypt:.claude/rules/quality-gates.md:7-9@bd3b48ce |  |
 | RL-048 | AL-092, PR-103 | adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:14-17@64f0aa79f; mystic-crypt-ui:.claude/rules/quality-checks.md:100-103@1664bd63 | PRE (cc): per project, as the recommendation: focused after a feature phase and before a release, full on request; a full audit before every release or a quarterly one (AL-092) is a project's own schedule |
-| RL-049 | AL-093, AL-095 | adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:21-27@64f0aa79f; adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:43-48@64f0aa79f |  |
-| RL-050 | AL-094, AL-096 | adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:39@64f0aa79f; adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:50@64f0aa79f |  |
+| RL-049 | AL-093, AL-095 | adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:21-27@64f0aa79f; adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:43-48@64f0aa79f | struck 2026-11-19: report format of adaptive-learner's coverage audit, kept in its .claude/rules/ai-workflow/test-coverage-audits.md; no other project runs this audit (rule inventory of 2026-11-18) |
+| RL-050 | AL-094, AL-096 | adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:39@64f0aa79f; adaptive-learner:.claude/rules/ai-workflow/test-coverage-audits.md:50@64f0aa79f | struck 2026-11-19: history filing of adaptive-learner's coverage audit, kept in its .claude/rules/ai-workflow/test-coverage-audits.md (rule inventory of 2026-11-18) |
 | RL-051 | FR-052 | agent memory (private); the maintainer's private notes @24832bb; the maintainer's private notes @d4b9276; the maintainer's private notes @7975255 |  |
 | RL-052 | AL-246, PR-105 | adaptive-learner:.claude/rules/coding-standards.md:176@fdacfb376; adaptive-learner:.claude/rules/quality-checks.md:218-221@c8613cb90; adaptive-learner:.claude/rules/quality-checks.md:237@c8613cb90; mystic-crypt-ui:.claude/rules/quality-checks.md:18-19@1664bd63 |  |
 | RL-053 | PR-106 | mystic-crypt:.claude/rules/quality-gates.md:17-21@bd3b48ce |  |
@@ -338,7 +338,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | RL-116 | FR-022, PR-153 | the maintainer's private notes @c01fb82; the maintainer's private notes @24832bb; agent memory (private); mystic-crypt-ui:.claude/rules/release-workflow.md:7-9@55d2cc37; the gate at each repository's next release, as -Werror: maintainer, 2026-11-18 (occasion: the RL-127 bump drafts of 2026-11-18 found mavenLocal() ungated in 11 of 17 consumers, and two jars in ~/.m2 that differ from the Maven Central ones of the same version) |  |
 | RL-117 | PR-153 | mystic-crypt-ui:.claude/rules/release-workflow.md:7-9@55d2cc37 |  |
 | RL-118 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb |  |
-| RL-119 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb |  |
+| RL-119 | FR-088 | agent memory (private); the maintainer's private notes @37f0a69; the maintainer's private notes @24832bb | struck 2026-11-19: outdated, the target versions 4.0 and 20.0 are superseded by silly-io 5.0 and file-worker 21.1, raising family dependencies is carried by RL-120 and the bump drafts of RL-127 (rule inventory of 2026-11-18) |
 | RL-120 | FR-084 | agent memory (private); the maintainer's private notes @37f0a69; the start of every cycle: maintainer, 2026-11-14 |  |
 | RL-121 | PR-159 | mystic-crypt-ui:.claude/rules/lessons-learned.md:128-133@ea37b736 |  |
 | RL-122 | PR-154 | mystic-crypt-ui:.claude/rules/release-workflow.md:111-115@55d2cc37; mystic-crypt:CLAUDE.md:44@7ed18b3a |  |
