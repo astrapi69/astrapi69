@@ -29,7 +29,7 @@ Read on demand; the rules every session needs are in core/.
 - Before implementing a heuristic, detection rule, threshold or prediction about data shape, run it against real data, report counts and sample cases, and treat the spec as a hypothesis. (RL-028)
 - Treat a recurrence as its bug class reopened: say so in the issue, link the chain and extend the original tests until the whole class is pinned. (RL-029)
 - When a read and a write start from the same action, change the action instead of adding a wait; a value from live data is ordered only within one run, so pin its source across runs. (RL-030)
-- Keep end-to-end text assertions locale-robust: match a pattern or a stable untranslated signal (test id, state, count), never one locale's wording. (RL-031)
+- Keep end-to-end text assertions locale-robust: match a pattern or a stable untranslated signal (test id, state, count), never one locale's wording; when you translate or change a string an E2E spec asserts on, search the specs for the old wording and update them in the same PR, even if that PR's CI does not run them. (RL-031)
 - Never commit a focused test (such as test.only). (RL-032)
 - Never weaken the full (nightly) suite to make a selective PR run green; debug the selection mechanism instead. (RL-033)
 - Never remove a safety tripwire such as a production marker to make tests pass; find out why a test pointed at production. (RL-034)
