@@ -20,7 +20,7 @@ Read on demand; the rules every session needs are in core/.
 - Log developer detail at DEBUG, important actions at INFO, the unexpected but harmless at WARNING and what affects the user at ERROR (HTTP 4xx as WARNING, 5xx as ERROR with trace). (DC-043)
 - Prefer self-explanatory names, and put explanations into the doc comment (Javadoc, docstring, TSDoc), not into inline comments. (DC-044)
 - Write no comment that says what the code does, reads like a commit message or marks authorship (added by AI), and no commented-out code; git keeps the history. (DC-045)
-- In code, give a TODO or FIXME an issue reference (TODO(#NN)), and write an inline comment only as a short WHY for a genuinely non-obvious spot with no doc-comment home. (DC-046)
+- In code or a document, give a TODO or FIXME an issue reference (TODO(#NN)); a question parked in a document is written TODO(clarify): <question> only within the session, and before the merge each one is answered or turned into an issue (TODO(#NN)); write an inline comment only as a short WHY for a genuinely non-obvious spot with no doc-comment home. (DC-046)
 - Add no setting the code never reads: check that the code reads a new setting, and remove a feature's settings together with the feature. (DC-047)
 - Put no user-visible string literal into UI code: every label, tooltip, title and error message goes through the i18n lookup, with a literal default where the lookup takes one. (DC-048)
 - When you translate or change a string an E2E spec asserts on, search the specs for the old wording and update them in the same PR, even if that PR's CI does not run them. (DC-049)
