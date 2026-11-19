@@ -9,5 +9,5 @@
 - Put a fix to the maintainer as a decision only if it changes a documented contract: a Javadoc or API promise, a persisted format or an architectural decision; other fixes need no OK. (AG-102)
 - Add a dependency, an MCP server included, only after asking and checking its maintenance and security; prefer existing ones, and scrutinize crypto ones extra. (AG-103)
 - Ask before changing an architectural decision such as a file format, the plugin mechanism or the persistence layer. (AG-104)
-- Work in this order: open PRs (self-merged only with a grant), bugs, infrastructure (CI, security, gates), UI fixes, cleanup, features, release. (AG-105)
+- Work in this order: open PRs (self-merged only with a grant), bugs (on 'weiter' or 'work through the bugs' work the open bug issues as the queue in P order, smallest scope first within a tier, without waiting in between), infrastructure (CI, security, gates), UI fixes, cleanup, features, release. (AG-105)
 - Before posting anything to a repository the maintainer does not own, show him the final text and wait for an explicit yes for that very posting. (AG-106)
