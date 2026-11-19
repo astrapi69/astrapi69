@@ -13,7 +13,7 @@
 - Work in every repository, the private notes too, only in ../<repo>-worktrees/<name>; briefs and logs go to ../<repo>-worktrees/_work/; remove merged worktrees. (AG-064)
 - In a repository without PRs (the private notes), commit on your own short-lived branch, merge main into it, push it to main. A conflict where both sides say the same and an instruction of the maintainer decides between the older and the newer version you resolve that way and name in the report; when the versions contradict each other and no instruction decides, stop and report. (NW-021)
 - Write Conventional Commits (feat, fix, refactor, docs, test, chore, build) with a scope where it is clear. (AG-065)
-- Make each commit one logical change and the smallest reversible unit that is green on its own; when a split breaks the build, keep the pieces in one commit. Under the squash pilot (NW-026) this shape lives inside the pull request, and develop carries one commit per pull request. (AG-066)
+- Make each commit one logical change and the smallest reversible unit that keeps the project's everyday gate green on its own (no exception to test-first lifts this); when a split breaks the build, keep the pieces in one commit. Under the squash pilot (NW-026) this shape lives inside the pull request, and develop carries one commit per pull request. (AG-066)
 - In the commit and PR body explain why; the diff already shows what. (AG-067)
 - Cite the issue in the commit subject as (#NN) when the change has one, and put Closes #NN only into the commit or PR body that completes the fix. (AG-068)
 - Close an issue only by its fix's closing keyword with the right number, never by hand; never write fix, close or resolve before a number that stays open. (AG-069)
