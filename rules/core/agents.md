@@ -47,8 +47,7 @@
 
 ## When the maintainer is travelling
 
-- When the maintainer is travelling only ccw works: there is no cc as a bridge and no local terminal. (NW-008)
-- ccw reads directly the public rules and the maintainer's private notes repository (STATUS.md, the collection files); the board it reaches only through labels and the section ccw (NW-023). (NW-009)
+- When the maintainer is travelling only ccw works: there is no cc as a bridge and no local terminal.
 - A task that needs the local machine (setting secrets, local files, a local build with the gate on the pinned JDK, a repository ccw cannot reach) ccw sets to Wartet auf Rechner with a short description (the label status:wartet-auf-rechner, or that status in its row of the section ccw), and works on. (NW-010)
 - Back at the machine, cc takes the items in Wartet auf Rechner first. (NW-011)
 

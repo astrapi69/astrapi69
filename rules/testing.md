@@ -46,8 +46,6 @@ Read on demand; the rules every session needs are in core/.
 - Look at the rendered application after a style change, not only at the names. (RL-046)
 - Aim at meaningful coverage, not 100%: assertions on real behaviour and regression pins for known bug classes count more than line count. (RL-047)
 - Run a focused coverage and gap audit over the changed area after a major feature phase and before a release, and a full one on request or on a schedule the project sets. (RL-048)
-- Structure a coverage audit as a coverage map per test level, a prioritized gap list and statistics with baseline, current value, a +N delta per suite and the gaps closed since the last audit. (RL-049)
-- Copy the previous audit report to a dated history file before overwriting it, never edit history files, and update the current report as soon as a session closes gaps. (RL-050)
 - Forbid local mutation testing in every brief and workflow prompt, and say how the CI result is read (job summary, report artifact). (RL-051)
 - Give surviving mutants in critical code (cryptography, data formats, key handling, services) tests at once; ignore or document them in trivial code (formatting, logging). (RL-052)
 - Kill a mutant that survives a weak assertion by sharpening the assertion, never by excluding the mutant, and document every survivor that cannot be killed with its reason. (RL-053)
