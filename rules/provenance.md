@@ -24,7 +24,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | AG-024 | FR-038, PR-160 | the maintainer's private notes @24832bb; mystic-crypt-ui:.claude/rules/release-workflow.md:56-62@55d2cc37; the maintainer's brief of 2026-11-06 (private); the maintainer's private notes @ab1e00f | PRE (cc): the maintainer's rule of 2026-11-06 for silly-bean ('Nie einen Daemon stoppen oder killen') ends PR-160's stop-once-idle and FR-038's stop-only-your-own; FR-038's own GRADLE_USER_HOME stays as an option; mystic-crypt-ui's stop-idle-daemons.sh (PR-160) now contradicts the rule |
 | AG-025 | FR-173 | agent memory (private) |  |
 | AG-027 | AL-049, PR-010 | adaptive-learner:.claude/rules/vibe-coding.md:16@64f0aa79f; mystic-crypt-ui:.claude/rules/vibe-coding.md:8-10@3bc21f0c |  |
-| AG-028 | AL-497, AL-498, AL-499, AL-500 | adaptive-learner:.claude/prompts/audit.md:14-30@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:158-159@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:145-163@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:165-176@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:178-179@86c7c78e5 | D6 (resolves AL summary item 27: the audit prompt's own P0-P3 scale) |
+| AG-028 | AL-497, AL-498, AL-499, AL-500 | adaptive-learner:.claude/prompts/audit.md:14-30@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:158-159@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:145-163@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:165-176@86c7c78e5; adaptive-learner:.claude/prompts/audit.md:178-179@86c7c78e5; an audit changes no code and hands its findings over as board entries to the owning session, an issue only under NW-016: maintainer, 2026-11-19 (occasion: the rule inventory of 2026-11-18 found "change no code unless asked" against NW-015, and none of D1 to D10 decided it) | D6 (resolves AL summary item 27: the audit prompt's own P0-P3 scale) |
 | AG-029 | AL-453 | adaptive-learner:.claude/rules/lessons/ci-gates.md:375-377@c8613cb90 | merged into AG-031 2026-11-19 (rule inventory of 2026-11-18) |
 | AG-030 | AL-391, AL-392 | adaptive-learner:.claude/rules/lessons/core.md:285-293@1d8158786; adaptive-learner:.claude/rules/lessons/core.md:295@1d8158786 |  |
 | AG-031 | AL-484 | adaptive-learner:.claude/rules/lessons/docs-i18n.md:51@86c7c78e5 |  |
@@ -206,7 +206,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | NW-012 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-013 | ~/.claude/CLAUDE.md | the maintainer's global agent instructions (private) | merged into RL-104 2026-11-19 (rule inventory of 2026-11-18; RL-104 already says it, its text is unchanged) |
 | NW-014 | NEW | decision of the maintainer 2026-11-06 |  |
-| NW-015 | NEW | decision of the maintainer 2026-11-06 |  |
+| NW-015 | NEW | decision of the maintainer 2026-11-06; an audit session is the exception, by AG-028: maintainer, 2026-11-19 |  |
 | NW-016 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-017 | NEW | decision of the maintainer 2026-11-06 |  |
 | NW-018 | NEW | decision of the maintainer 2026-11-06 | merged into AG-009 2026-11-19 (rule inventory of 2026-11-18) |
