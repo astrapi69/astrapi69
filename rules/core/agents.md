@@ -49,6 +49,6 @@
 
 ## Findings
 
-- Finding means fixing (the Boy Scout rule): a bug or a small improvement you find in the repository you work on, inside the task or not, fix in the same session, test first, in its own PR, merged when green; propose a change first only when it is in another repository (NW-017) or changes a documented contract (NW-016). (NW-015)
+- Finding means fixing (the Boy Scout rule): leave the code you touch cleaner than you found it; a bug, a weak test, a wrong doc, dead code or another small improvement you find in the repository you work on, inside the task or not, fix in the same session, each with a test (test first), in the same or its own PR, merged when green; propose a change first only when it is in another repository (NW-017) or changes a documented contract (NW-016). (NW-015)
 - File an issue or put a decision to the maintainer instead of fixing only when the fix changes a documented contract (a Javadoc or API promise, a persisted format, an architectural decision), depends on something external or is too big for the session; give the reason and the next step; every other fix needs no OK. (NW-016)
 - Hand a finding in another repository to the session that owns that repository; that session fixes it. (NW-017)
