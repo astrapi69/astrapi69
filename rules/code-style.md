@@ -17,7 +17,7 @@ Read on demand; the rules every session needs are in core/.
 - Add no setting the code never reads: check that the code reads a new setting, and remove a feature's settings together with the feature. (DC-047)
 - Put no user-visible string literal into UI code: every label, tooltip, title and error message goes through the i18n lookup, with a literal default where the lookup takes one. (DC-048)
 - Treat CLI exit codes as a contract: document them and keep error exits distinguishable from domain results. (DC-050)
-- Before deleting a conversion, a cast or a null check, find out what it currently prevents, and turn a rule that holds only by accident into a guard clause that states it. (DC-051)
+- Before deleting code, verify a claim that it is dead or has "0 consumers" with a search covering every consumer, third-party code that renders yours included, and before deleting a conversion, a cast or a null check find out what it currently prevents; turn a rule that holds only by accident into a guard clause that states it. (DC-051)
 - Keep importing or loading a module free of side effects. (DC-052)
 - Let an application's diagnostic and convenience checks fail open (warn and proceed, never kill the app), make a fail-open fallback warn and be testable so a miss cannot pass silently, and where a version derivation can fail at runtime fall back to a sentinel such as 0.0.0+unknown with a warning log, never silently to a hardcoded number. (DC-054)
 - Keep production data out of the project tree: resolve every data path through a helper at use time, never relative to the working directory or frozen at import. (DC-055)
