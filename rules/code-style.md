@@ -32,4 +32,4 @@ Read on demand; the rules every session needs are in core/.
 - Keep production data out of the project tree: resolve every data path through a helper at use time, never relative to the working directory or frozen at import. (DC-055)
 - In a lifecycle operation (add, remove, delete, re-add), list every place it leaves residue (database, files, caches, browser storage) and clean each or document why it stays. (DC-056)
 - Change a dependency's code only in its own repository and release cycle, never from inside the consumer. (DC-057)
-- Make code you write yourself library-grade (no app imports, own types, a doc comment with a usage example, own tests, one concern), and say in the commit message and the PR why nothing existing fits. (DC-059)
+- Make code you write yourself library-grade (no app imports, own types, a doc comment with a usage example, own tests, no incidental coupling, one concern) in the smallest scope that works, and say in the commit message and the PR why nothing existing fits. (DC-059)
