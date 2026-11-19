@@ -17,7 +17,7 @@
 - Run GUI automation and UI tests only on an Xvfb started for them, with DISPLAY set on each call and its socket checked; take the pid from $!, never pgrep -f. (AG-022)
 - Never stop or kill a Gradle daemon, not even an idle one of another session; to keep builds apart, an agent or worktree may use its own GRADLE_USER_HOME. (AG-024)
 - As a subagent, report a finding with its reproducing test to the session that dispatched you; that session fixes it, or files the issue under NW-016. (DZ-001)
-- Run shell commands as bash -c '...' with the commands written out, chain dependent steps with && (never ;) and never pipe a check through | tail or anything else that hides its exit code; use a script file only when it is committed. A go before each round is adaptive-learner's own rule. (DZ-002)
+- Run shell commands as bash -c '...' with the commands written out, under set -euo pipefail when they use variables, loops or path arguments, never in an interactive login shell; chain dependent steps with && (never ;) and never pipe a check through | tail or anything else that hides its exit code; use a script file only when it is committed. A go before each round is adaptive-learner's own rule. (DZ-002)
 
 ## The Agenten-Board
 
