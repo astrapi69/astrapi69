@@ -10,7 +10,7 @@ Read on demand; the rules every session needs are in core/.
 - When an upstream pin blocks a dependency bump, defer that bump and name the blocker in the commit that updates what it can. (DC-064)
 - For a bulk dependency bump, try one instance first, prefer an allowlisted update over a bare one, and check the lock diff for packages held back as risky before committing. (DC-065)
 - Validate a build-tool major bump with a full build, never with the tests alone. (DC-066)
-- Make a gate fail closed and report what it measured: one that cannot check fails or skips with a reason, and its output names what ran and the size of the scanned set. (DC-067)
+- Make a gate fail closed and report what it measured: one that cannot check fails or skips with a reason, and its output names what ran and the size of the scanned set; give every gate five tests: it catches the violation, passes on a clean tree, fails closed without its basis, reports what it measured, and its number means the same everywhere (named tolerance for unavoidable variance). (DC-067)
 - Turn a check, hook or workflow off or narrow its run only visibly, with a reason in the diff or a named opt-in; a check that only warns enforces nothing. (DC-068)
 - Wired is not working: run a new workflow, scheduled job, hook or check end to end once in the session that wires it and record the result; a check no step runs is a silent gate. (DC-069)
 - Name in each rule-enforcing CI gate the rule section it enforces, and when retiring the gate or the rule remove both halves in the same PR. (DC-070)
