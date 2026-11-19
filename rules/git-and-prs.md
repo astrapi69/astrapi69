@@ -6,7 +6,7 @@ Read on demand; the rules every session needs are in core/.
 
 - Pass every commit through the repository's hooks; when a hook rewrote files, re-stage them, check `git diff --cached` and commit again. (AG-086)
 - Before a local merge, confirm you are on the target branch: a checkout fails when another worktree holds that branch, and the merge then reports 'Already up to date'. (AG-087)
-- In a PR for one sub-issue write `Closes #<sub-issue>` first and `Refs #<umbrella>` after it; close the umbrella once its last sub-issue is closed or the rest is deferred, saying so. (AG-088)
+- In a PR for one sub-issue write `Closes #<sub-issue>` first and `Refs #<umbrella>` after it; only a PR closes the umbrella, the one of its last part, with `Closes #<umbrella>`; a rest that is deferred first becomes a new issue under NW-016, which that PR names; never close an umbrella by hand (AG-069). (AG-088)
 - When the repository has a PR template, mirror its section headings in the PR body. (AG-089)
 - Self-merge only after GitGuardian reported success on the PR's current head; if its run stays queued, push one empty commit to trigger it and wait for that success. (AG-090)
 - Under strict branch protection, merge develop into the PR branch first and wait for a fresh green round before you merge. (AG-091)
