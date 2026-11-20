@@ -3,7 +3,7 @@
 # Working as an agent
 
 - At session start fetch and compare with origin, read the recent history and the rules for the task, and get a green baseline before you change anything. (AG-001)
-- Before building on claimed work, your own included, verify the artifact (git status, git log -1, the gate's exit code); after each commit check that HEAD moved. (AG-005)
+- Before building on claimed work, your own included, verify the artifact (git status, git log -1, the gate's exit code); after each commit check that HEAD moved. A second check is blind: whoever checks another agent's result gets the question and the raw data, not the author's conclusion, and where author and checker disagree a measurement decides, not a majority. Once per cycle, five measured claims picked at random from the reports are measured again; the result, with the agent and the deviation, goes into the decision log in the private notes repository. (AG-005)
 - Inspect a proposed mass edit (global sed, regex sweep) instead of running it: read each match, apply the changes one by one and diff the result. (AG-007)
 - Never guess: answer an unclear point from evidence, else park it under the most cautious assumption and go on; stop and ask only if it blocks or risks damage. (AG-008)
 - Name in every final report the issues opened and closed in the session (the goal: at least as many closed as opened), and end it with the parked questions (where, which assumption), the answers found in evidence (source) and how each blocking question was resolved. (AG-009)
