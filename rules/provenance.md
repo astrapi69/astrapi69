@@ -186,7 +186,7 @@ Every rule carries an id. This table names the inventory rows it was consolidate
 | DC-077 | AL-393, PR-111 | adaptive-learner:.claude/rules/lessons/backend.md:13-31@fdacfb376; mystic-crypt-ui:.claude/rules/lessons-learned.md:89-92@ea37b736 |  |
 | DC-078 | AL-394 | adaptive-learner:.claude/rules/lessons/backend.md:49-51@fdacfb376 |  |
 | DC-079 | AL-434 | adaptive-learner:.claude/rules/lessons/ci-gates.md:79-84@c8613cb90 | merged into DC-078 2026-11-19 (rule inventory of 2026-11-18) |
-| DC-080 | AL-433 | adaptive-learner:.claude/rules/lessons/ci-gates.md:23-77@c8613cb90 |  |
+| DC-080 | AL-433; changed by decision of the maintainer 2026-11-20: the newest release instead of the lowest new major that meets the target, checked every cycle instead of each quarter (occasion: in mystic-crypt-ui actions/cache@v4 stood two majors behind and every build warned that Node.js 20 is deprecated; mystic-crypt-ui#1106) | adaptive-learner:.claude/rules/lessons/ci-gates.md:23-77@c8613cb90 |  |
 | DC-081 | AL-046, AL-047 | adaptive-learner:.claude/rules/lessons-learned.md:16-32@fdf722721; adaptive-learner:.claude/rules/lessons-learned.md:34-38@fdf722721 | struck 2026-11-19: not a rule but an observation about Claude Code, kept as a plain line without an id (rule inventory of 2026-11-18) |
 | DC-082 | AL-379 | adaptive-learner:.claude/rules/lessons/core.md:159@1d8158786 |  |
 | DZ-001 | AL-016, AG-081, DZ-001, NEW | decision of the maintainer 2026-11-06 (doubtful case G1-1); decision of the maintainer 2026-11-07 (finding means fixing) | maintainer, doubtful case G1-1; maintainer 2026-11-07 |
