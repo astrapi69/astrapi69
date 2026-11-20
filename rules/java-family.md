@@ -7,18 +7,15 @@ Read on demand; the rules every session needs are in core/.
 - Apply the workflow rules of mystic-crypt's workflow.md in all three crypt-family repositories (mystic-crypt, crypt-data, crypt-api), whichever the work starts in. (AG-112)
 - Deprecate a replaced method instead of removing it, and remove it only in the next major. (AG-113)
 - Move master onto the tag at every Java family release: a fast-forward where master is an ancestor, else a merge of the tag, never a force push, leaving no diff to the tag; other projects keep their own release path. (RL-091)
-- Use a family library that almost fits and report the gap in its repository instead of working around it quietly; a workaround names the issue in a comment, and an open vulnerability goes only to a private advisory. (RL-101)
-- Before using a family API inside a library, check that its package is exported to JPMS modules and that it behaves correctly; fix a defect at its source or work around it consciously with a comment saying why. (RL-102)
+- Use a family library that almost fits: check first that its package is exported to JPMS modules and that it behaves correctly, and fix a defect at its source or report the gap in its repository instead of working around it quietly; a workaround is conscious, with a comment naming the issue and why, and an open vulnerability goes only to a private advisory. (RL-101)
 - Keep as a project's own only what it defines itself and what must not move with a library: identifiers in a persisted or signed format, its domain rules and its user-facing text. (RL-103)
 - Declare a dependency where it is used, declare a used dependency directly instead of inheriting it through another, and import nothing just in case. (RL-104)
 - Inside a family library, walk the hierarchy top-down and stop at the first level that fits: never an own cryptographic primitive, the JDK first (checked before assuming Bouncy Castle), own code last. (RL-105)
 - Add a new dependency to a library only after asking and only when the JDK, Bouncy Castle and the family do not fit: maintained, no known CVEs, a sane transitive footprint, JPMS-capable. (RL-106)
-- Write own code in the smallest scope that works and library-grade (own tests, javadoc, no incidental coupling), and say in the commit message and the PR why no existing level fits. (RL-107)
 - Compile, test and release every family library on JDK 25; one on an older version moves to 25 at its next release as a new major, with one CHANGELOG sentence naming the new minimum. (RL-108)
 - Build only through the Gradle wrapper (./gradlew), with dependency versions in the version catalog gradle/libs.versions.toml. (RL-109)
 - Give every new public package of a JPMS module its exports entry in module-info.java, and check that the consumer really resolves it. (RL-110)
-- Format every file and its license header through Spotless: run spotlessApply before committing, and never hand-format against the formatter. (RL-111)
-- Keep a family library's everyday local gate at ./gradlew build, with the tests, the JaCoCo floor inside check, and Spotless. (RL-112)
+- Keep a family library's everyday local gate at ./gradlew build, with the tests, the JaCoCo floor inside check, and Spotless, and format every file and its license header through spotlessApply before committing, never by hand against the formatter. (RL-112)
 - Make javadoc warnings break the build (failOnError, -Werror, check depending on javadoc) at the next regular release of each repository an agent touches anyway, proven in the PR by a deliberately missing doc that fails it; a release that only fixes a bug goes out without it, and it comes with the next regular release. (RL-113)
 - Until a repository has -Werror, check javadoc for warnings with LC_ALL=C and a forced rerun, grepping the full log for warning|warnung and the summary line; never conclude from a default-locale or -q run. (RL-114)
 - Fix the javadoc locale to en_US (options.locale plus the user.language and user.country jFlags) together with -Werror, proven by a build under a German locale that gives lang=en, English texts and equal artifacts. (RL-115)
@@ -35,7 +32,6 @@ Read on demand; the rules every session needs are in core/.
 - Write Java tests with JUnit Jupiter, with AssertJ-style fluent assertions where the neighbouring tests already use them. (RL-126)
 - Give every class, test classes included, and every public member Javadoc in the style of its neighbours, and keep an existing {@inheritDoc} as it is. (DC-026)
 - End a Javadoc sentence without a dot unless another sentence follows it. (DC-027)
-- Declare a dependency you use directly in your own build, instead of inheriting it quietly through another one. (NW-013)
 
 ## Where to look
 
