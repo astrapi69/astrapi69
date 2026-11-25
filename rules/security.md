@@ -4,7 +4,7 @@
 
 Read on demand; the rules every session needs are in core/.
 
-- Fix an advisory's issue in its private fork with the full local gate (no CI there); the maintainer approves the text, the fixed release ships, then the advisory is published and may be named. (AG-037)
+- Fix an advisory's issue in its private fork, and run its gate as a workflow, started by workflow_dispatch, in a private repository (a temporary advisory fork runs no Actions); the maintainer approves the text, the fixed release ships, then the advisory is published and may be named. (AG-037)
 - Keep tokens in the system keyring and pass them as environment variables; make them fine-grained, limited to your own repositories and with an expiry date. (AG-038)
 - Check a keyring entry with `secret-tool lookup ... >/dev/null`, never with `secret-tool search`, which prints the secret in clear text. (AG-039)
 - Overwrite files that held key material (`shred -u`) instead of only deleting them. (AG-040)
