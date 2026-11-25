@@ -14,6 +14,7 @@
 - When a hook or a permission refuses a command, report it to whoever dispatched you; never work around it and never hand it to the maintainer to run. (AG-014)
 - Call a change done only when merged or its PR open, the build green, tests written, touched docs updated and, if user-facing, its CHANGELOG bullet collected. (AG-016)
 - Make work survive a crash: commit WIP once green, write each finding to a file at once, start long runs detached, and say at a stop what is uncommitted where. (AG-019)
+- Measurements (tests, wall clocks, reruns, reproductions, the release gate) run in GitHub Actions, started by workflow_dispatch when needed, never on the maintainer's machine; a measurement that must stay private runs in a private repository; only signing with the maintainer's keys stays local; reading and searching files stays local. (AG-021)
 - Run GUI automation and UI tests only on an Xvfb started for them, with DISPLAY set on each call and its socket checked; take the pid from $!, never pgrep -f. (AG-022)
 - Never stop or kill a Gradle daemon, not even an idle one of another session; to keep builds apart, an agent or worktree may use its own GRADLE_USER_HOME. (AG-024)
 - As a subagent, report a finding with its reproducing test to the session that dispatched you; that session fixes it, or files the issue under NW-016. (DZ-001)
