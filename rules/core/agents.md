@@ -2,8 +2,8 @@
 
 # Working as an agent
 
-- At session start fetch and compare with origin, read the recent history and the rules for the task, and get a green baseline before you change anything. (AG-001)
-- Before building on claimed work, your own included, verify the artifact (git status, git log -1, the gate's exit code); after each commit check that HEAD moved. A second check is blind: whoever checks another agent's result gets the question and the raw data, not the author's conclusion, and where author and checker disagree a measurement decides, not a majority. Once per cycle, five measured claims picked at random from the reports are measured again; the result, with the agent and the deviation, goes into the decision log in the private notes repository. (AG-005)
+- At session start fetch and compare with origin, read the recent history and the rules for the task, and get a green baseline before you change anything: the GitHub Actions run of the commit you start from, started by workflow_dispatch when it has none (AG-021). (AG-001)
+- Before building on claimed work, your own included, verify the artifact (git status, git log -1, the conclusion of the gate's GitHub Actions run, AG-021); after each commit check that HEAD moved. A second check is blind: whoever checks another agent's result gets the question and the raw data, not the author's conclusion, and where author and checker disagree a measurement decides, not a majority. Once per cycle, five measured claims picked at random from the reports are measured again; the result, with the agent and the deviation, goes into the decision log in the private notes repository. (AG-005)
 - Inspect a proposed mass edit (global sed, regex sweep) instead of running it: read each match, apply the changes one by one and diff the result. (AG-007)
 - Never guess: answer an unclear point from evidence, else park it under the most cautious assumption and go on; stop and ask only if it blocks or risks damage. (AG-008)
 - Name in every final report the issues opened and closed in the session (the goal: at least as many closed as opened), and end it with the parked questions (where, which assumption), the answers found in evidence (source) and how each blocking question was resolved. (AG-009)
@@ -13,10 +13,10 @@
 - Check a brief or dispatch prompt against the repo's rules; surface a conflict before acting, and deviate only when the user overrides the rule in this session. (AG-013)
 - When a hook or a permission refuses a command, report it to whoever dispatched you; never work around it and never hand it to the maintainer to run. (AG-014)
 - Call a change done only when merged or its PR open, the build green, tests written, touched docs updated and, if user-facing, its CHANGELOG bullet collected. (AG-016)
-- Make work survive a crash: commit WIP once green, write each finding to a file at once, start long runs detached, and say at a stop what is uncommitted where. (AG-019)
-- Measurements (tests, wall clocks, reruns, reproductions, the release gate) run in GitHub Actions, started by workflow_dispatch when needed, never on the maintainer's machine; a measurement that must stay private runs in a private repository; only signing with the maintainer's keys stays local; reading and searching files stays local. (AG-021)
-- Run GUI automation and UI tests only on an Xvfb started for them, with DISPLAY set on each call and its socket checked; take the pid from $!, never pgrep -f. (AG-022)
-- Never stop or kill a Gradle daemon, not even an idle one of another session; to keep builds apart, an agent or worktree may use its own GRADLE_USER_HOME. (AG-024)
+- Make work survive a crash: commit and push WIP at once and let its GitHub Actions run show whether it is green (AG-021), write each finding to a file at once, start a long local command detached, and say at a stop what is uncommitted where. (AG-019)
+- Measurements (tests, wall clocks, reruns, reproductions, the release gate) run in GitHub Actions, started by workflow_dispatch when needed, never on the maintainer's machine; a measurement that must stay private runs in a private repository; only signing with the maintainer's keys and formatting (spotlessApply) stay local; reading and searching files stays local. (AG-021)
+- Run GUI automation and UI tests only on an Xvfb started for them, the UI tests in GitHub Actions (AG-021), with DISPLAY set on each call and its socket checked; take the pid from $!, never pgrep -f. (AG-022)
+- Never stop or kill a Gradle daemon, not even an idle one of another session; to keep the local Gradle runs apart (formatting and signing, the only ones AG-021 leaves), an agent or worktree may use its own GRADLE_USER_HOME. (AG-024)
 - As a subagent, report a finding with its reproducing test to the session that dispatched you; that session fixes it, or files the issue under NW-016. (DZ-001)
 - Run shell commands as bash -c '...' with the commands written out, under set -euo pipefail when they use variables, loops or path arguments, never in an interactive login shell; chain dependent steps with && (never ;) and never pipe a check through | tail or anything else that hides its exit code; use a script file only when it is committed. A go before each round is adaptive-learner's own rule. (DZ-002)
 
@@ -42,7 +42,7 @@
 ## When the maintainer is travelling
 
 - When the maintainer is travelling only ccw works: there is no cc as a bridge and no local terminal.
-- A task that needs the local machine (setting secrets, local files, a local build with the gate on the pinned JDK, a repository ccw cannot reach) ccw sets to Wartet auf Rechner with a short description (the label status:waiting-for-machine, or that status in its row of the section ccw), and works on; back at the machine, cc takes the items in Wartet auf Rechner first. (NW-010)
+- A task that needs the local machine (setting secrets, local files, signing with the maintainer's keys, a repository ccw cannot reach) ccw sets to Wartet auf Rechner with a short description (the label status:waiting-for-machine, or that status in its row of the section ccw), and works on; a build, a test or the gate is no such task, since each runs in GitHub Actions, started by workflow_dispatch when needed, a private one in a private repository (AG-021); back at the machine, cc takes the items in Wartet auf Rechner first. (NW-010)
 
 ## Where rules live
 
