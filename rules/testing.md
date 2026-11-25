@@ -38,4 +38,4 @@ Read on demand; the rules every session needs are in core/.
 - Forbid local mutation testing in every brief and workflow prompt, and say how the CI result is read (job summary, report artifact). (RL-051)
 - Kill a mutant that survives a weak assertion by sharpening the assertion, never by excluding the mutant, and document every survivor that cannot be killed with its reason; give surviving mutants in critical code (cryptography, data formats, key handling, services) tests at once, and ignore or document them in trivial code (formatting, logging). (RL-053)
 - Set how often mutation testing runs per repository, always in its CI workflow and never locally; the family has no common cadence. (OC-004)
-- Run a heavy coverage run only in CI, and locally only on request; a cheap floor stays in the everyday local gate, such as the JaCoCo floor in check of the Java libraries. (OC-005)
+- Run a heavy coverage run only in CI, started by workflow_dispatch when needed (AG-021); a cheap floor stays in the everyday gate of the CI workflow, such as the JaCoCo floor in check of the Java libraries. (OC-005)
