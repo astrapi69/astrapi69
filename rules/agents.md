@@ -4,7 +4,7 @@
 
 Read on demand; the rules every session needs are in core/.
 
-- Write files with the Write tool or a quoted heredoc (<<'EOF'), never with a heredoc that expands $VAR, and compile or run them before trusting them, the project's code in its GitHub Actions run (AG-021). (AG-025)
+- Write files with the Write tool or a quoted heredoc (<<'EOF'), never with a heredoc that expands $VAR, the texts of AG-072 only with the Write tool, and compile or run them before trusting them, the project's code in its GitHub Actions run (AG-021). (AG-025)
 - In a prompt or brief, reference the existing patterns instead of inventing new ones, and name the file, the class or function and the expected behaviour. (AG-027)
 - In an audit, read the authoritative sources (rules, roadmap, backlog) before flagging, cite the rule for each finding, rank on the P0-P5 urgency scale, and change no code: hand each finding over as a board entry to the session that owns the repository, which fixes it by NW-015; file an issue only in the cases of NW-016. (AG-028)
 - For a bug reported against a running build, first establish which build the user ran; when the code looks right but the user insists, ask for evidence, never dismiss or guess-fix. (AG-030)
